@@ -1,0 +1,103 @@
+t 1425.0 315.0 GS_attente_P3 n 0 w n {} ne
+p 1425.0 395.0 {GS_vérification_Stock3} 0 n
+t 1425.0 485.0 GS_Stock3_Vide n 0 w n {} ne
+t 1540.0 395.0 GS_Stock3_Plein e 0 w n {} ne
+t 385.0 400.0 GS_Stock1_Plein e 0 w n {} ne
+p 255.0 400.0 {GS_vérification_Stock1} 0 n
+p 170.0 480.0 GS_Etat_Stock1_Vide 1 w
+p 220.0 100.0 Assemblage 0 w out n
+p 175.0 325.0 info_P1 0 w in n
+p 850.0 50.0 {Départ_Gestion_Stock} 1 n
+t 850.0 530.0 GS_Stock2_Vide n 0 w n {} ne
+t 850.0 135.0 GS_attente_CO n 0 w n {} ne
+t 850.0 360.0 GS_attente_P2 n 0 w n {} ne
+p 930.0 360.0 info_P2 0 e in n
+p 850.0 440.0 {GS_vérification_Stock2} 0 n
+p 745.0 530.0 GS_Etat_Stock2_Vide 1 w
+p 360.0 480.0 GS_Etat_Stock1_Plein 0 e
+t 255.0 480.0 GS_Stock1_Vide n 0 w n {} ne
+p 900.0 580.0 P2 0 e out n
+p 1590.0 90.0 Evacuation 0 e out n
+p 1545.0 315.0 info_P3 0 e in n
+p 1325.0 485.0 GS_Etat_Stock3_Vide 1 w
+p 1485.0 550.0 P3 0 e out n
+p 350.0 560.0 P1 0 e out n
+t 255.0 325.0 GS_attente_P1 n 0 w n {} ne
+p 850.0 835.0 {GS_attente_évacuation} 0 n
+t 850.0 905.0 {GS_attente_assemblage_évacué} s 0 w n {} ne
+t 850.0 745.0 GS_attente_assemblage n 0 w n {} ne
+p 985.0 770.0 {ordre_vérif} 0 e out n
+p 675.0 930.0 {info_Ass_évacué} 0 w in n
+t 1000.0 440.0 GS_Stock2_Plein e 0 w n {} ne
+p 985.0 530.0 GS_Etat_Stock2_Plein 0 e
+p 735.0 135.0 info_CO 0 s in n
+p 850.0 235.0 {GS_attente_Type_Pièce} 0 n
+p 1535.0 485.0 GS_Etat_Stock3_Plein 0 e
+p 1005.0 170.0 ordre_CO 0 e out n
+p 500.0 885.0 info_Ass_conforme 0 n in w
+p 1025.0 645.0 info_P2_dans_assembleur 0 e in w
+p 1025.0 690.0 info_P3_dans_assembleur 0 e in w
+p 1030.0 600.0 info_P1_dans_assembleur 0 e in w
+e info_P3_dans_assembleur GS_attente_assemblage 1 n
+e info_P2_dans_assembleur GS_attente_assemblage 1 n
+e info_P1_dans_assembleur GS_attente_assemblage 1 n
+e info_Ass_conforme {GS_attente_assemblage_évacué} 1 n
+e GS_Stock2_Plein 0.08124673981 179.0818598 Evacuation 0.6264600962 154.1557655 1 n
+e GS_Stock2_Vide 0.4325393746 179.9222054 Assemblage 0.8585071775 177.7301325 1 n
+e info_CO GS_attente_CO 1 n
+e {Départ_Gestion_Stock} GS_attente_CO 1 n
+e GS_attente_CO {GS_attente_Type_Pièce} 1 n
+e GS_attente_CO ordre_CO 1 n
+e {GS_attente_Type_Pièce} GS_attente_P2 1 n
+e GS_attente_P2 {GS_vérification_Stock2} 1 n
+e info_P2 GS_attente_P2 1 n
+e {GS_vérification_Stock2} GS_Stock2_Vide 1 n
+e GS_Etat_Stock2_Vide GS_Stock2_Vide 1 n
+e GS_Stock2_Vide P2 1 n
+e {GS_vérification_Stock2} GS_Stock2_Plein 1 n
+e GS_Etat_Stock2_Plein 0.2986821344 39.84971769 GS_Stock2_Plein 0.6319154248 32.55764119 1 n
+e GS_Stock2_Plein 0.7914761589 31.04834939 GS_Etat_Stock2_Plein 0.1639895652 29.15475947 1 n
+e GS_Stock2_Vide 0.3367177855 154.3502511 {Départ_Gestion_Stock} 0.5952413249 106.5082156 1 n
+e GS_Stock2_Plein 0.2136963392 114.9782588 {Départ_Gestion_Stock} 0.9023154555 107.6475731 1 n
+e GS_Stock1_Plein 0.25 37.0 {Départ_Gestion_Stock} 0.5305939803 303.5918312 1 n
+e GS_Stock1_Vide 0.04625029305 111.6825859 {Départ_Gestion_Stock} 0.4920488744 480.5996255 1 n
+e GS_Stock1_Plein 0.7942927664 29.12043956 GS_Etat_Stock1_Plein 0.1024163823 35.0 1 n
+e {GS_vérification_Stock1} GS_Stock1_Plein 1 n
+e GS_Stock1_Vide P1 1 n
+e GS_Etat_Stock1_Vide GS_Stock1_Vide 1 n
+e {GS_vérification_Stock1} GS_Stock1_Vide 1 n
+e info_P1 GS_attente_P1 1 n
+e GS_attente_P1 {GS_vérification_Stock1} 1 n
+e {GS_attente_Type_Pièce} GS_attente_P1 1 n
+e GS_Stock3_Plein 0.304725998 243.238566 {Départ_Gestion_Stock} 0.03898956518 131.93938 1 n
+e GS_Stock3_Vide 0.3605710308 148.3947438 {Départ_Gestion_Stock} 0.9894926537 242.5283486 1 n
+e GS_Stock3_Plein 0.8302405049 33.12099032 GS_Etat_Stock3_Plein 0.1668569115 38.07886553 1 n
+e GS_Etat_Stock3_Plein 0.3318774695 26.41968963 GS_Stock3_Plein 0.6697594951 33.12099032 1 n
+e {GS_vérification_Stock3} GS_Stock3_Plein 1 n
+e GS_Stock3_Vide P3 1 n
+e GS_Etat_Stock3_Vide GS_Stock3_Vide 1 n
+e {GS_vérification_Stock3} GS_Stock3_Vide 1 n
+e info_P3 GS_attente_P3 1 n
+e GS_attente_P3 {GS_vérification_Stock3} 1 n
+e {GS_attente_Type_Pièce} GS_attente_P3 1 n
+e GS_attente_assemblage {GS_attente_évacuation} 1 n
+e GS_attente_assemblage {ordre_vérif} 1 n
+e {GS_attente_évacuation} {GS_attente_assemblage_évacué} 1 n
+e {info_Ass_évacué} {GS_attente_assemblage_évacué} 1 n
+e GS_Etat_Stock1_Plein 0.8772843649 147.8005413 {GS_attente_assemblage_évacué} 0.4238240258 119.4194289 1 n
+e GS_Etat_Stock2_Plein 0.7597604184 114.2147101 {GS_attente_assemblage_évacué} 0.1372186261 119.8540779 1 n
+e GS_Etat_Stock3_Plein 0.794455668 134.2013413 {GS_attente_assemblage_évacué} 0.9802895744 242.8600416 1 n
+e {GS_attente_assemblage_évacué} 0.4798341 158.2687588 GS_Etat_Stock1_Vide 0.7290761074 244.1065341 1 n
+e {GS_attente_assemblage_évacué} 0.3357411374 101.3558089 GS_Etat_Stock2_Vide 0.7515014172 106.0047169 1 n
+e {GS_attente_assemblage_évacué} 0.04299621712 202.3388247 GS_Etat_Stock3_Vide 0.6597192208 147.0272085 1 n
+e GS_Stock3_Vide GS_Etat_Stock3_Plein 1 n
+e GS_Stock2_Vide GS_Etat_Stock2_Plein 1 n
+e GS_Etat_Stock1_Plein 0.2752507693 25.3179778 GS_Stock1_Plein 0.611767662 34.05877273 1 n
+e GS_Stock1_Vide GS_Etat_Stock1_Plein 1 n
+e GS_Stock1_Vide 0.4532453646 124.3261839 Assemblage 0.629763695 236.2794955 1 n
+e GS_Stock3_Vide 0.4205265009 213.0093895 Assemblage 0.9338723803 297.2944668 1 n
+e GS_Stock3_Plein 0.05854859477 102.8834292 Evacuation 0.8330525051 92.28217596 1 n
+e GS_Stock1_Plein 0.07692085672 159.2388144 Evacuation 0.5493098127 636.2955288 1 n
+h gestion_stock_complet
+
+

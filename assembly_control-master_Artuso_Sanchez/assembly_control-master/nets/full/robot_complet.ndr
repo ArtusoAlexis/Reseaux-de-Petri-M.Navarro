@@ -1,0 +1,94 @@
+p 775.0 150.0 {départ_Robot} 1 n
+t 950.0 150.0 R_attente_droite e 0 w n {} ne
+p 950.0 85.0 ordre_droite 0 n in w
+t 540.0 150.0 R_attente_gauche 0 w n
+p 540.0 90.0 ordre_gauche 0 e in w
+t 540.0 425.0 R_attente_stopgauche w 0 w n {} ne
+p 775.0 425.0 ordre_stop 0 n in s
+t 950.0 425.0 R_attente_stopdroite e 0 w n {} ne
+p 540.0 490.0 R_attente 0 e
+p 950.0 485.0 R_attente2 0 e
+p 785.0 625.0 {prend piece} 0 e Prend w
+t 485.0 580.0 R_attente_OP1 0 w n
+p 485.0 635.0 OP1 0 e OP1 w
+t 485.0 695.0 R_attente_finOP1 s 0 w n fin_OP1 w
+t 785.0 680.0 R_attente_fprise e 0 w n fprise s
+t 1055.0 705.0 R_attente_fpose w 0 w n fpose s
+p 1135.0 705.0 info_fpose 0 s out e
+t 130.0 375.0 R_attente_fin_OP3 e 0 w n fin_OP3 w
+p 950.0 365.0 Tempo_droite 0 e
+p 355.0 320.0 ordre_OP3 0 e in w
+p 130.0 435.0 OP3 0 s OP3 w
+t 255.0 415.0 R_attente_OP3 0 w n
+p 255.0 605.0 OP2 0 e OP2 w
+t 255.0 530.0 R_attente_OP2 e 0 w n {} ne
+p 165.0 530.0 ordre_OP2 0 s in n
+t 250.0 695.0 R_attente_fin_OP2 e 0 w n fin_PO2 s
+p 145.0 695.0 info_finOP2 0 s out n
+p 605.0 695.0 info_finOP1 0 s out n
+p 695.0 680.0 info_fprise 0 s out w
+p 1010.0 640.0 {pose piece} 0 e Pose w
+p 1140.0 565.0 ordre_pose 0 n in e
+t 1050.0 565.0 R_attente_pose 0 w n
+p 580.0 590.0 ordre_OP1 0 s in e
+t 875.0 545.0 Rob_attente_prendD 0 w n
+t 615.0 550.0 Rob_attente_prendG 0 w n
+p 770.0 520.0 ordre_prend 0 n in s
+t 950.0 290.0 tempo_droite 0 w n
+t 540.0 290.0 tempo_gauche 0 w n
+p 540.0 365.0 Tempo_gauche 0 e
+p 540.0 225.0 {va à gauche} 0 e G w
+p 950.0 220.0 {va à droite} 0 e D w
+p 130.0 290.0 info_finOP3 0 e out n
+e tempo_droite Tempo_droite 2 n
+e {va à droite} tempo_droite 1 n
+e R_attente_droite {va à droite} 1 n
+e tempo_gauche Tempo_gauche 2 n
+e {va à gauche} tempo_gauche 1 n
+e R_attente_gauche {va à gauche} 1 n
+e {départ_Robot} R_attente_droite 1 n
+e Tempo_droite R_attente_stopdroite 1 n
+e R_attente_stopdroite R_attente2 1 n
+e R_attente2 Rob_attente_prendD 1 n
+e R_attente2 R_attente_pose 1 n
+e Rob_attente_prendD {prend piece} 1 n
+e {prend piece} R_attente_fprise 1 n
+e R_attente_pose {pose piece} 1 n
+e {pose piece} R_attente_fpose 1 n
+e R_attente_fpose 0.04779127882 206.2280291 {départ_Robot} 0.9761968374 295.2964586 1 n
+e ordre_droite R_attente_droite 1 n
+e ordre_prend Rob_attente_prendD 1 n
+e ordre_pose R_attente_pose 1 n
+e ordre_stop R_attente_stopdroite 1 n
+e ordre_OP1 R_attente_OP1 1 n
+e ordre_gauche R_attente_gauche 1 n
+e OP1 R_attente_finOP1 1 n
+e R_attente_OP1 OP1 1 n
+e R_attente Rob_attente_prendG 1 n
+e R_attente R_attente_OP1 1 n
+e R_attente_stopgauche R_attente 1 n
+e Tempo_gauche R_attente_stopgauche 1 n
+e {départ_Robot} R_attente_gauche 1 n
+e ordre_stop R_attente_stopgauche 1 n
+e ordre_prend Rob_attente_prendG 1 n
+e Rob_attente_prendG {prend piece} 1 n
+e R_attente_fprise 0.9058302758 150.6021248 {départ_Robot} 0.8670752474 213.1032614 1 n
+e R_attente R_attente_OP2 1 n
+e R_attente_OP2 OP2 1 n
+e OP2 R_attente_fin_OP2 1 n
+e ordre_OP2 R_attente_OP2 1 n
+e R_attente R_attente_OP3 1 n
+e R_attente_OP3 OP3 1 n
+e OP3 R_attente_fin_OP3 1 n
+e ordre_OP3 R_attente_OP3 1 n
+e R_attente_finOP1 0.05147039018 191.9505145 {départ_Robot} 0.6435552391 79.02531246 1 n
+e R_attente_fin_OP3 0.3590150963 183.3575742 {départ_Robot} 0.3461966677 168.9289792 1 n
+e R_attente_fin_OP2 0.1836949793 313.8439102 {départ_Robot} 0.5224173118 270.6806236 1 n
+e R_attente_fpose info_fpose 1 n
+e R_attente_fprise info_fprise 1 n
+e R_attente_finOP1 info_finOP1 2 nw
+e R_attente_fin_OP2 info_finOP2 2 ne
+e R_attente_fin_OP3 info_finOP3 2 e
+h robot
+
+

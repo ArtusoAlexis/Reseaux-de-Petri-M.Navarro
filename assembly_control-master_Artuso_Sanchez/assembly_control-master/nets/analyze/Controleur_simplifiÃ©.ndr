@@ -1,0 +1,64 @@
+p 510.0 50.0 {Départ_Controleur} 1 n
+t 360.0 50.0 {C_attente_départ} n 0 w n {} ne
+t 350.0 125.0 C_attente_Pos_t1 s 0 w n pos_t1 n
+t 460.0 190.0 C_attente_finReccam c 0 w n fin_reccam s
+p 460.0 125.0 Controleur_Attente2 0 e
+p 460.0 275.0 Controleur_Attente3 0 e
+t 460.0 345.0 C_attente_fprise e 0 w n fprise s
+p 460.0 425.0 Controleur_Attente4 0 e
+t 355.0 425.0 C_attente_Evacuation s 0 w n {} ne
+p 255.0 425.0 Controleur_Attente6 0 w
+t 255.0 335.0 C_attente_Pos_T2 e 0 w n pos_t2 n
+p 250.0 125.0 Controleur_Attente 0 n
+t 170.0 125.0 C_attente_fpose w 0 w n {} ne
+p 170.0 190.0 Controleur_Attente9 0 w
+t 170.0 250.0 {C_attente_t2_arrêté} w 0 w n {} ne
+p 170.0 335.0 Controleur_Attente8 0 w
+p 1025.0 265.0 Controleur_Attente10 0 s
+t 460.0 495.0 C_attente_Assemblage s 0 w n {} ne
+p 560.0 495.0 Controleur_Attente5 0 n
+t 685.0 495.0 C_attente_Pos_Ass s 0 w n pos_assem n
+p 775.0 440.0 Controleur_Attente7 0 se
+t 1025.0 440.0 C_attente_P3 e 0 w n P3 c
+t 775.0 360.0 C_attente_P1 w 0 w n P1 c
+p 775.0 270.0 Controleur_Attente12 0 s
+t 775.0 205.0 C_attente_finOP1 c 0 w n fin_OP1 n
+t 1025.0 50.0 C_attente_finOP3 c 0 w n fin_OP3 n
+t 900.0 110.0 C_attente_finOP2 c 0 w n fin_OP2 n
+p 900.0 195.0 Controleur_Attente11 0 s
+t 900.0 285.0 C_attente_P2 s 0 w n P2 c
+e Controleur_Attente7 C_attente_P3 1 n
+e Controleur_Attente7 C_attente_P2 1 n
+e C_attente_P1 Controleur_Attente12 1 n
+e C_attente_finOP3 {Départ_Controleur} 1 n
+e C_attente_finOP2 {Départ_Controleur} 1 n
+e C_attente_finOP1 {Départ_Controleur} 1 n
+e C_attente_fpose Controleur_Attente 1 n
+e {Départ_Controleur} {C_attente_départ} 1 n
+e Controleur_Attente4 C_attente_Evacuation 1 n
+e Controleur_Attente11 C_attente_finOP2 1 n
+e Controleur_Attente10 C_attente_finOP3 1 n
+e Controleur_Attente12 C_attente_finOP1 1 n
+e C_attente_P3 Controleur_Attente10 1 n
+e C_attente_P2 Controleur_Attente11 1 n
+e Controleur_Attente7 C_attente_P1 1 n
+e Controleur_Attente9 C_attente_fpose 1 n
+e {C_attente_t2_arrêté} Controleur_Attente9 1 n
+e Controleur_Attente8 {C_attente_t2_arrêté} 1 n
+e C_attente_Pos_Ass Controleur_Attente7 1 n
+e C_attente_Pos_T2 Controleur_Attente8 1 n
+e Controleur_Attente6 C_attente_Pos_T2 1 n
+e Controleur_Attente5 C_attente_Pos_Ass 1 n
+e C_attente_Evacuation Controleur_Attente6 1 n
+e C_attente_Assemblage Controleur_Attente5 1 n
+e Controleur_Attente4 C_attente_Assemblage 1 n
+e C_attente_fprise Controleur_Attente4 1 n
+e Controleur_Attente3 C_attente_fprise 1 n
+e C_attente_finReccam Controleur_Attente3 1 n
+e Controleur_Attente2 C_attente_finReccam 1 n
+e C_attente_Pos_t1 Controleur_Attente2 1 n
+e Controleur_Attente C_attente_Pos_t1 1 n
+e {C_attente_départ} Controleur_Attente 1 n
+h {Controleur_simplifié}
+
+

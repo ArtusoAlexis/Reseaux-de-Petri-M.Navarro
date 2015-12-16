@@ -1,0 +1,30 @@
+t 355.0 140.0 attente_Pos_t1 e 0 w n {} ne
+t 770.0 50.0 Attente_Pos_T2 e 0 w n {} ne
+p 355.0 235.0 {Dépla.vers_T1} 0 s
+t 540.0 50.0 PR_capteur_T1_T2 s 0 w n {} ne
+p 650.0 50.0 {Dépla.T1-T2} 0 n
+p 770.0 160.0 PR_Position_T2 0 e
+t 770.0 235.0 {PR_capteur_T2-T1} e 0 w n {} ne
+t 565.0 320.0 {PR_capteur_T1-Ass} s 0 w n {} ne
+p 420.0 320.0 {Dépla.vers_Ass} 0 s
+t 255.0 320.0 Attente_Pos_Ass n 0 w n {} ne
+p 90.0 320.0 PR_Position_Assembleur 1 s
+t 90.0 235.0 {PR_capteur_Ass-T1} n 0 w n {} ne
+p 355.0 50.0 PR_Position_T1 0 n
+e Attente_Pos_T2 PR_Position_T2 1 n
+e PR_Position_Assembleur {PR_capteur_Ass-T1} 1 n
+e {PR_capteur_Ass-T1} {Dépla.vers_T1} 1 n
+e {Dépla.vers_T1} attente_Pos_t1 1 n
+e attente_Pos_t1 PR_Position_T1 1 n
+e PR_Position_T1 PR_capteur_T1_T2 1 n
+e PR_capteur_T1_T2 {Dépla.T1-T2} 1 n
+e {Dépla.T1-T2} Attente_Pos_T2 1 n
+e PR_Position_T2 {PR_capteur_T2-T1} 1 n
+e {PR_capteur_T2-T1} {Dépla.vers_T1} 1 n
+e {PR_capteur_T1-Ass} {Dépla.vers_Ass} 1 n
+e {Dépla.vers_Ass} Attente_Pos_Ass 1 n
+e Attente_Pos_Ass PR_Position_Assembleur 1 n
+e PR_Position_T1 0.9465424193 179.0027933 {PR_capteur_T1-Ass} 0.2555496665 86.05230968 1 n
+h {Position_Robot_simplifié}
+
+

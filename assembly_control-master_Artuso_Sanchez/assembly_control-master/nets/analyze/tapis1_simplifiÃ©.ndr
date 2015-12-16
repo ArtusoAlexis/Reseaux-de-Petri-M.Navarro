@@ -1,0 +1,11 @@
+t 185.0 125.0 {Remise en route de T1} w 0 w n {} ne
+t 305.0 125.0 {Signal CO} e 0 w n CO c
+p 245.0 50.0 {Départ_Tapis1} 1 n AV_T1 e
+p 245.0 190.0 {Arrêt_T1} 0 s
+e {Remise en route de T1} {Départ_Tapis1} 1 n
+e {Arrêt_T1} {Remise en route de T1} 1 n
+e {Signal CO} {Arrêt_T1} 1 n
+e {Départ_Tapis1} {Signal CO} 1 n
+h {tapis1_simplifié}
+
+

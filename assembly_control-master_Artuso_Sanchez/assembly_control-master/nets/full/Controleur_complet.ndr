@@ -1,0 +1,120 @@
+t 395.0 390.0 C_attente_Evacuation 0 w n
+p 395.0 450.0 Controleur_Attente6 0 w
+p 395.0 330.0 Evacuation 0 n in e
+t 1370.0 670.0 C_attente_P3 c 0 w n P3 n
+p 390.0 245.0 Controleur_Attente 0 n
+t 270.0 245.0 {C_attente_départ} 0 w n
+p 270.0 315.0 ordre_droite 0 w out s
+t 1020.0 310.0 C_attente_finOP1 c 0 w n fin_OP1 n
+p 1045.0 380.0 Controleur_Attente12 0 e
+p 925.0 285.0 info_finOP1 0 n in w
+t 1210.0 255.0 C_attente_finOP2 c 0 w n fin_OP2 n
+t 1185.0 605.0 C_attente_P2 e 0 w n P2 s
+p 1130.0 530.0 ordre_OP2 0 w out n
+p 1250.0 665.0 P2 0 s in e
+p 1055.0 655.0 ordre_OP1 0 s out e
+t 995.0 595.0 C_attente_P1 e 0 w n P1 s
+p 1275.0 395.0 Controleur_Attente11 0 s
+p 1315.0 315.0 info_finOP2 0 n in s
+p 445.0 755.0 ordre_pose 0 e out s
+p 560.0 685.0 {info_t2_arrêté} 0 s in e
+p 315.0 625.0 Controleur_Attente9 0 s
+t 150.0 625.0 C_attente_fpose 0 w n
+p 220.0 710.0 info_fpose 0 e in s
+p 75.0 720.0 {ordre_démarrage_t2} 0 s out w
+t 445.0 510.0 C_attente_Pos_T2 s 0 w n pos_t2 n
+p 315.0 510.0 info_Pos_t2 0 n in w
+t 445.0 675.0 {C_attente_t2_arrêté} 0 w n
+p 560.0 520.0 ordre_gauche 0 n out s
+p 445.0 605.0 Controleur_Attente8 0 e
+p 1390.0 760.0 P3 0 s in e
+p 1450.0 665.0 ordre_OP3 0 n out e
+p 1430.0 475.0 Controleur_Attente10 0 n
+t 1440.0 285.0 C_attente_finOP3 c 0 w n fin_OP3 n
+p 1485.0 190.0 info_finOP3 0 n in s
+p 775.0 50.0 {Départ_Controleur} 1 n
+p 495.0 140.0 info_Pos_t1 0 w in e
+p 520.0 275.0 ordre_stop 0 w out s
+p 740.0 740.0 Controleur_Attente7 0 s
+p 955.0 705.0 P1 0 s in w
+p 820.0 630.0 info_Pos_Ass 0 n in e
+p 710.0 145.0 Controleur_Attente2 0 e
+t 595.0 160.0 C_attente_Pos_t1 c 0 w n pos_t1 n
+t 705.0 200.0 C_attente_finReccam c 0 w n fin_reccam s
+p 825.0 245.0 ordre_prend 0 n out e
+p 610.0 265.0 info_finReccam 0 n in w
+p 705.0 285.0 Controleur_Attente3 0 e
+t 705.0 385.0 C_attente_fprise c 0 w n fprise s
+p 605.0 350.0 info_fprise 0 n in s
+p 785.0 335.0 {ordre_démarrage_t1} 0 e out s
+t 700.0 650.0 C_attente_Pos_Ass s 0 w n pos_assem n
+p 770.0 565.0 Controleur_Attente5 0 w
+p 920.0 450.0 Assemblage 0 n in s
+t 830.0 510.0 C_attente_Assemblage 0 w n
+p 705.0 465.0 Controleur_Attente4 0 e
+p 295.0 410.0 ordre_extinction_t2 0 w out s
+e {Départ_Controleur} 0.487949259 145.4166428 {C_attente_départ} 0.1360858697 91.43850392 1 n
+e {C_attente_départ} ordre_droite 1 n
+e {C_attente_départ} Controleur_Attente 1 n
+e Controleur_Attente C_attente_Pos_t1 1 n
+e info_Pos_t1 C_attente_Pos_t1 1 n
+e C_attente_Pos_t1 ordre_stop 1 n
+e C_attente_Pos_t1 Controleur_Attente2 1 n
+e Controleur_Attente2 C_attente_finReccam 1 n
+e C_attente_finReccam ordre_prend 1 n
+e C_attente_finReccam Controleur_Attente3 1 n
+e info_finReccam C_attente_finReccam 1 n
+e info_fprise C_attente_fprise 1 n
+e Controleur_Attente3 C_attente_fprise 1 n
+e C_attente_fprise Controleur_Attente4 1 n
+e C_attente_fprise {ordre_démarrage_t1} 1 n
+e Controleur_Attente4 C_attente_Assemblage 1 n
+e Assemblage C_attente_Assemblage 1 n
+e Evacuation C_attente_Evacuation 1 n
+e C_attente_Assemblage 0.47248838 63.95310782 ordre_gauche 0.0228132783 98.00510191 1 n
+e C_attente_Assemblage Controleur_Attente5 1 n
+e C_attente_Evacuation Controleur_Attente6 1 n
+e C_attente_Evacuation ordre_extinction_t2 1 n
+e C_attente_Evacuation ordre_droite 1 n
+e Controleur_Attente5 C_attente_Pos_Ass 1 n
+e info_Pos_Ass C_attente_Pos_Ass 1 n
+e Controleur_Attente6 C_attente_Pos_T2 1 n
+e info_Pos_t2 C_attente_Pos_T2 1 n
+e C_attente_Pos_Ass 0.4679896619 105.1189802 ordre_stop 0.8593592146 50.44799302 1 n
+e C_attente_Pos_T2 Controleur_Attente8 1 n
+e C_attente_Pos_Ass Controleur_Attente7 1 n
+e Controleur_Attente8 {C_attente_t2_arrêté} 1 n
+e {info_t2_arrêté} {C_attente_t2_arrêté} 1 n
+e {C_attente_t2_arrêté} ordre_pose 1 n
+e {C_attente_t2_arrêté} Controleur_Attente9 1 n
+e Controleur_Attente9 C_attente_fpose 1 n
+e info_fpose C_attente_fpose 1 n
+e C_attente_fpose 0.0935835209 79.32212806 ordre_gauche 0.6497269889 59.40538696 1 n
+e C_attente_fpose {ordre_démarrage_t2} 1 n
+e C_attente_fpose 0.3321606631 85.08818957 Controleur_Attente 0.6664761588 87.8179936 1 n
+e C_attente_Pos_T2 ordre_stop 1 n
+e Controleur_Attente7 C_attente_P1 1 n
+e Controleur_Attente7 0.8425295303 167.5231327 C_attente_P2 0.7658627587 120.5985075 1 n
+e Controleur_Attente7 0.8086797763 188.6796226 C_attente_P3 0.6250000001 100.409163 1 n
+e P1 C_attente_P1 1 n
+e P2 C_attente_P2 1 n
+e P3 C_attente_P3 1 n
+e C_attente_P1 0.190970818 77.25283166 Controleur_Attente12 0.7442150964 55.03635162 1 n
+e C_attente_P2 ordre_OP2 1 n
+e C_attente_P2 Controleur_Attente11 1 n
+e C_attente_P3 Controleur_Attente10 1 n
+e Controleur_Attente12 C_attente_finOP1 1 n
+e Controleur_Attente10 C_attente_finOP3 1 n
+e Controleur_Attente11 C_attente_finOP2 1 n
+e info_finOP1 C_attente_finOP1 1 n
+e info_finOP2 C_attente_finOP2 1 n
+e info_finOP3 C_attente_finOP3 1 n
+e C_attente_finOP1 0.3281711147 97.52948277 {Départ_Controleur} 0.9399142037 124.7878199 1 n
+e C_attente_finOP2 0.4150577031 153.3231881 {Départ_Controleur} 0.9510098526 181.5323663 1 n
+e C_attente_finOP3 0.2394053477 90.19977827 {Départ_Controleur} 0.005681690245 56.0357029 1 n
+e Controleur_Attente4 C_attente_Evacuation 1 n
+e C_attente_P1 ordre_OP1 1 n
+e C_attente_P3 ordre_OP3 1 n
+h Controleur
+
+

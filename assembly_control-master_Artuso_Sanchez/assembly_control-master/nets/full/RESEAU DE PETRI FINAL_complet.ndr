@@ -1,0 +1,393 @@
+t 1280.0 1180.0 {C_attente_Evacuation } 0 w n
+p 1280.0 1240.0 Controleur_Attente6 0 w
+p 1280.0 1120.0 Evacuation 0 n in e
+t 2255.0 1460.0 C_attente_P3 c 0 w n P3 n
+p 1275.0 1035.0 Controleur_Attente 0 n
+t 1155.0 1035.0 {C_attente_départ} 0 w n
+p 1155.0 1105.0 ordre_droite 0 w out s
+t 1905.0 1100.0 C_attente_finOP1 c 0 w n fin_OP1 n
+p 1930.0 1170.0 Controleur_Attente12 0 e
+t 2095.0 1045.0 C_attente_finOP2 c 0 w n fin_OP2 n
+t 2070.0 1395.0 C_attente_P2 e 0 w n P2 s
+p 2015.0 1320.0 ordre_OP2 0 w out n
+p 2135.0 1455.0 P2 0 s in e
+p 1940.0 1445.0 ordre_OP1 0 s out e
+t 1880.0 1385.0 C_attente_P1 e 0 w n P1 s
+p 2160.0 1185.0 Controleur_Attente11 0 s
+p 1330.0 1545.0 ordre_pose 0 e out s
+p 1200.0 1415.0 Controleur_Attente9 0 s
+t 1035.0 1415.0 C_attente_fpose n 0 w n {} ne
+p 1105.0 1500.0 info_fpose 0 e in s
+p 960.0 1510.0 {ordre_démarrage_t2} 0 s out w
+t 1330.0 1300.0 C_attente_Pos_T2 s 0 w n pos_t2 n
+p 1200.0 1300.0 info_Pos_t2 0 n in w
+t 1330.0 1465.0 {C_attente_t2_arrêté} 0 w n
+p 1445.0 1310.0 ordre_gauche 0 n out s
+p 1330.0 1395.0 Controleur_Attente8 0 e
+p 2275.0 1550.0 P3 0 s in e
+p 2335.0 1455.0 ordre_OP3 0 n out e
+p 2315.0 1265.0 Controleur_Attente10 0 n
+t 2325.0 1075.0 C_attente_finOP3 c 0 w n fin_OP3 n
+p 1660.0 840.0 {Départ_Controleur} 1 n
+p 1380.0 930.0 info_Pos_t1 0 w in e
+p 1405.0 1065.0 ordre_stop 0 w out s
+p 1625.0 1530.0 Controleur_Attente7 0 s
+p 1840.0 1495.0 P1 0 s in w
+p 1705.0 1420.0 info_Pos_Ass 0 n in e
+p 1595.0 935.0 Controleur_Attente2 0 e
+t 1480.0 950.0 C_attente_Pos_t1 c 0 w n pos_t1 n
+t 1590.0 990.0 C_attente_finReccam c 0 w n fin_reccam s
+p 1710.0 1035.0 ordre_prend 0 n out e
+p 1590.0 1075.0 Controleur_Attente3 0 e
+t 1590.0 1175.0 C_attente_fprise c 0 w n fprise s
+t 1585.0 1440.0 C_attente_Pos_Ass s 0 w n pos_assem n
+p 1655.0 1355.0 Controleur_Attente5 0 w
+p 1805.0 1240.0 Assemblage 0 n in s
+t 1715.0 1300.0 C_attente_Assemblage 0 w n
+p 310.0 850.0 {Départ_Caméra} 1 w
+t 310.0 985.0 {Debut Reccam} s 0 w n co c
+p 390.0 1160.0 {Cam_Type de pièce} 0 n
+t 390.0 1225.0 Cam_P1 w 0 w n P1 c
+p 390.0 1290.0 info_P1 0 w out s
+t 465.0 1160.0 Cam_P2 e 0 w n P2 c
+p 465.0 1230.0 info_P2 0 e out s
+t 285.0 1160.0 Cam_P3 w 0 w n P3 c
+p 390.0 985.0 {Reccam en cours} 0 e Reccam n
+t 390.0 1055.0 fin_reccam ne 0 w n fin_reccam c
+p 245.0 985.0 ordre_CO 0 n in w
+p 220.0 1215.0 info_P3 0 w out s
+p 970.0 980.0 info_finReccam 0 n in w
+t 1460.0 1810.0 {Remise en route de T1} w 0 w n {} ne
+t 1580.0 1810.0 {Signal CO} e 0 w n CO c
+p 1645.0 1910.0 info_CO 0 s out e
+p 1520.0 1735.0 {Départ_Tapis1} 1 n AV_T1 e
+p 1520.0 1875.0 {Arrêt_T1} 0 s
+p 1425.0 1665.0 {ordre_démarrage_t1} 0 e out s
+p 1620.0 1245.0 Controleur_Attente4 0 e
+p 1140.0 1775.0 {Arrêt_T2 } 0 e
+t 975.0 1775.0 {Signal arr_T2} s 0 w n {arrêt_t2} n
+p 975.0 1900.0 {Départ_Tapis2} 1 n AV_T2 s
+t 840.0 1900.0 {mise en marche T2} n 0 w n {} ne
+p 840.0 1775.0 T2_Attente 0 w
+p 1080.0 1590.0 {info_t2_arrêté} 0 s in e
+p 720.0 1575.0 ordre_extinction_t2 0 w out s
+t 1140.0 1900.0 {Début Mise en arrêt T2} e 0 w n {} ne
+p 775.0 2825.0 {Départ_Assembleur} 1 n
+p 775.0 2990.0 {Ass_Vérif} 0 n Verif w
+p 900.0 2835.0 {ordre_vérif} 0 e in s
+p 550.0 3065.0 Ass_Temporisation 0 s
+p 905.0 3065.0 info_Ass_conforme 0 e out s
+t 775.0 3065.0 {A_attente_vérif} nw 0 w n assemblage_conforme s
+t 550.0 2940.0 A_finTempo e 0 w n {assemblage_évacué} w
+p 550.0 2870.0 {info_Ass_évacué} 0 w out n
+t 775.0 2915.0 {A_attente_ordrevérif} 0 w n
+t 1530.0 450.0 {PR_capteur_Ass-T1} n 0 w n {} ne
+p 1690.0 450.0 PR_Position_T1 0 n
+t 1865.0 450.0 PR_capteur_T2 s 0 w n {} ne
+p 1370.0 450.0 PR_Position_Assembleur 1 n
+p 2005.0 450.0 PR_Position_T2 0 n
+t 1690.0 655.0 PR_capteur_Assembleur s 0 w n {} ne
+t 1860.0 540.0 {PR_capteur_T2-T1} s 0 w n {} ne
+p 3205.0 150.0 {départ_Robot} 1 n
+t 3380.0 150.0 R_attente_droite e 0 w n {} ne
+t 2970.0 150.0 R_attente_gauche n 0 w n {} ne
+t 2970.0 400.0 R_attente_stopgauche w 0 w n {} ne
+t 3380.0 400.0 R_attente_stopdroite e 0 w n {} ne
+p 2970.0 465.0 R_attente 0 e
+p 3380.0 460.0 R_attente2 0 e
+p 3215.0 600.0 {prend piece} 0 e Prend w
+t 2915.0 555.0 R_attente_OP1 0 w n
+p 2915.0 610.0 OP1 0 e OP1 w
+t 2915.0 670.0 R_attente_finOP1 s 0 w n fin_OP1 w
+t 3215.0 655.0 R_attente_fprise e 0 w n fprise s
+t 3485.0 680.0 R_attente_fpose w 0 w n fpose s
+t 2560.0 350.0 R_attente_fin_OP3 e 0 w n fin_OP3 w
+p 2560.0 410.0 OP3 0 s OP3 w
+t 2685.0 390.0 R_attente_OP3 0 w n
+p 2685.0 580.0 OP2 0 e OP2 w
+t 2685.0 505.0 R_attente_OP2 e 0 w n {} ne
+t 2680.0 670.0 R_attente_fin_OP2 e 0 w n fin_PO2 s
+p 3440.0 615.0 {pose piece} 0 e Pose w
+t 3480.0 540.0 R_attente_pose 0 w n
+t 3305.0 520.0 Rob_attente_prendD 0 w n
+t 3045.0 525.0 Rob_attente_prendG 0 w n
+t 2440.0 2455.0 GS_attente_P3 n 0 w n {} ne
+p 2440.0 2535.0 {GS_vérification_Stock3} 0 n
+t 2440.0 2625.0 GS_Stock3_Vide n 0 w n {} ne
+p 2440.0 2730.0 {GS_attente_P1-P2} 0 s
+t 2555.0 2535.0 GS_Stock3_Plein e 0 w n {} ne
+t 1400.0 2540.0 GS_Stock1_Plein e 0 w n {} ne
+p 1270.0 2540.0 {GS_vérification_Stock1} 0 n
+p 1185.0 2620.0 GS_Etat_Stock1_Vide 1 w
+p 1865.0 2190.0 {Départ_Gestion_Stock} 1 n
+t 1865.0 2670.0 GS_Stock2_Vide n 0 w n {} ne
+t 1865.0 2275.0 GS_attente_CO n 0 w n {} ne
+t 1865.0 2500.0 GS_attente_P2 n 0 w n {} ne
+p 1865.0 2580.0 {GS_vérification_Stock2} 0 n
+p 1760.0 2670.0 GS_Etat_Stock2_Vide 1 w
+p 1375.0 2620.0 GS_Etat_Stock1_Plein 0 e
+t 1270.0 2620.0 GS_Stock1_Vide n 0 w n {} ne
+p 1270.0 2755.0 {GS_attente_P2-P3} 0 n
+p 1865.0 2790.0 {GS_attente_P1-P3} 0 n
+p 2340.0 2625.0 GS_Etat_Stock3_Vide 1 w
+t 1270.0 2465.0 GS_attente_P1 n 0 w n {} ne
+p 1865.0 2975.0 {GS_attente_évacuation} 0 n
+t 1865.0 3045.0 {GS_attente_assemblage_évacué} s 0 w n {} ne
+t 1865.0 2885.0 GS_attente_assemblage n 0 w n {} ne
+t 2015.0 2580.0 GS_Stock2_Plein e 0 w n {} ne
+p 2000.0 2670.0 GS_Etat_Stock2_Plein 0 e
+p 1865.0 2375.0 {GS_attente_Type_Pièce} 0 n
+p 2550.0 2625.0 GS_Etat_Stock3_Plein 0 e
+p 1490.0 1105.0 info_fprise 0 n in s
+p 2920.0 2685.0 info_finOP1 0 n in w
+p 3015.0 2585.0 info_finOP2 0 n in s
+p 3110.0 2490.0 info_finOP3 0 n in s
+p 2970.0 215.0 {va à gauche} 0 e G w
+p 3380.0 215.0 {va à droite} 0 e D w
+t 2970.0 270.0 tempo_gauche e 0 w n {} ne
+p 2970.0 335.0 Tempo_gauche 0 e
+t 3380.0 270.0 tempo_droite e 0 w n {} ne
+p 3380.0 335.0 Tempo_droite 0 e
+t 855.0 2990.0 erreur n 0 w n {} ne
+p 955.0 2990.0 {info_Ass_vérif_erreur} 0 s out e
+e erreur {info_Ass_vérif_erreur} 1 n
+e {Ass_Vérif} erreur 1 n
+e GS_Stock2_Plein 0.08124673981 179.0818598 Evacuation 0.6264600962 154.1557654 1 n
+e GS_Stock2_Vide 0.4325393746 179.9222054 Assemblage 0.8585071775 177.7301325 1 n
+e info_CO GS_attente_CO 1 n
+e {Départ_Gestion_Stock} GS_attente_CO 1 n
+e GS_attente_CO {GS_attente_Type_Pièce} 1 n
+e GS_attente_CO ordre_CO 1 n
+e {GS_attente_Type_Pièce} GS_attente_P2 1 n
+e GS_attente_P2 {GS_vérification_Stock2} 1 n
+e info_P2 GS_attente_P2 1 n
+e {GS_vérification_Stock2} GS_Stock2_Vide 1 n
+e GS_Etat_Stock2_Vide GS_Stock2_Vide 1 n
+e GS_Stock2_Vide {GS_attente_P1-P3} 1 n
+e GS_Stock2_Vide P2 1 n
+e {GS_attente_P1-P3} GS_attente_assemblage 1 n
+e {GS_vérification_Stock2} GS_Stock2_Plein 1 n
+e GS_Etat_Stock2_Plein 0.2986821344 39.84971769 GS_Stock2_Plein 0.6319154248 32.55764119 1 n
+e GS_Stock2_Plein 0.7914761589 31.04834939 GS_Etat_Stock2_Plein 0.1639895652 29.15475947 1 n
+e GS_Stock2_Vide 0.3367177855 154.3502511 {Départ_Gestion_Stock} 0.5952413249 106.5082156 1 n
+e GS_Stock2_Plein 0.2136963392 114.9782588 {Départ_Gestion_Stock} 0.9023154555 107.6475731 1 n
+e GS_Stock1_Plein 0.25 37.0 {Départ_Gestion_Stock} 0.5305939803 303.5918312 1 n
+e GS_Stock1_Vide 0.04625029305 111.6825859 {Départ_Gestion_Stock} 0.4920488744 480.5996255 1 n
+e GS_Stock1_Plein 0.7942927664 29.12043956 GS_Etat_Stock1_Plein 0.1024163823 35.0 1 n
+e {GS_vérification_Stock1} GS_Stock1_Plein 1 n
+e GS_Stock1_Vide P1 1 n
+e GS_Stock1_Vide {GS_attente_P2-P3} 1 n
+e GS_Etat_Stock1_Vide GS_Stock1_Vide 1 n
+e {GS_vérification_Stock1} GS_Stock1_Vide 1 n
+e info_P1 GS_attente_P1 1 n
+e GS_attente_P1 {GS_vérification_Stock1} 1 n
+e {GS_attente_Type_Pièce} GS_attente_P1 1 n
+e GS_Stock3_Plein 0.304725998 243.238566 {Départ_Gestion_Stock} 0.03898956518 131.93938 1 n
+e GS_Stock3_Vide 0.3605710308 148.3947438 {Départ_Gestion_Stock} 0.9894926555 242.5283485 1 n
+e GS_Stock3_Plein 0.8302405049 33.12099032 GS_Etat_Stock3_Plein 0.1668569115 38.07886553 1 n
+e GS_Etat_Stock3_Plein 0.3318774695 26.41968963 GS_Stock3_Plein 0.6697594951 33.12099032 1 n
+e {GS_vérification_Stock3} GS_Stock3_Plein 1 n
+e GS_Stock3_Vide P3 1 n
+e GS_Stock3_Vide {GS_attente_P1-P2} 1 n
+e GS_Etat_Stock3_Vide GS_Stock3_Vide 1 n
+e {GS_vérification_Stock3} GS_Stock3_Vide 1 n
+e info_P3 GS_attente_P3 1 n
+e GS_attente_P3 {GS_vérification_Stock3} 1 n
+e {GS_attente_Type_Pièce} GS_attente_P3 1 n
+e {GS_attente_P2-P3} GS_attente_assemblage 1 n
+e {GS_attente_P1-P2} GS_attente_assemblage 1 n
+e GS_attente_assemblage {GS_attente_évacuation} 1 n
+e GS_attente_assemblage {ordre_vérif} 1 n
+e {GS_attente_évacuation} {GS_attente_assemblage_évacué} 1 n
+e {info_Ass_évacué} {GS_attente_assemblage_évacué} 1 n
+e GS_Etat_Stock1_Plein 0.8772843654 147.8005413 {GS_attente_assemblage_évacué} 0.4238240258 119.4194289 1 n
+e GS_Etat_Stock2_Plein 0.7597604188 114.2147101 {GS_attente_assemblage_évacué} 0.137218626 119.8540779 1 n
+e GS_Etat_Stock3_Plein 0.794455668 134.2013413 {GS_attente_assemblage_évacué} 0.9802895743 242.8600416 1 n
+e {GS_attente_assemblage_évacué} 0.4798340999 158.2687588 GS_Etat_Stock1_Vide 0.7290761072 244.1065341 1 n
+e {GS_attente_assemblage_évacué} 0.3357411374 101.3558089 GS_Etat_Stock2_Vide 0.7515014172 106.0047169 1 n
+e {GS_attente_assemblage_évacué} 0.04299621712 202.3388247 GS_Etat_Stock3_Vide 0.6597192207 147.0272084 1 n
+e GS_Stock3_Vide GS_Etat_Stock3_Plein 1 n
+e GS_Stock2_Vide GS_Etat_Stock2_Plein 1 n
+e GS_Etat_Stock1_Plein 0.2752507693 25.3179778 GS_Stock1_Plein 0.611767662 34.05877273 1 n
+e GS_Stock1_Vide GS_Etat_Stock1_Plein 1 n
+e GS_Stock1_Vide 0.4532453646 124.3261839 Assemblage 0.629763695 236.2794955 1 n
+e GS_Stock3_Vide 0.4205265009 213.0093895 Assemblage 0.9338723803 297.2944669 1 n
+e GS_Stock3_Plein 0.05854859477 102.8834292 Evacuation 0.9582488041 111.8257573 1 n
+e GS_Stock1_Plein 0.07692085672 159.2388144 Evacuation 0.5493098127 636.2955283 1 n
+e R_attente_fin_OP3 info_finOP3 2 n
+e R_attente_fin_OP2 info_finOP2 2 n
+e R_attente_finOP1 info_finOP1 2 n
+e R_attente_fprise info_fprise 1 n
+e R_attente_fpose info_fpose 1 n
+e R_attente_fin_OP2 0.1836949793 313.8439102 {départ_Robot} 0.5224173118 270.6806237 1 n
+e R_attente_fin_OP3 0.3590150963 183.3575742 {départ_Robot} 0.3461966677 168.9289792 1 n
+e R_attente_finOP1 0.05147039018 191.9505145 {départ_Robot} 0.6435552391 79.02531246 1 n
+e ordre_OP3 R_attente_OP3 1 n
+e OP3 R_attente_fin_OP3 1 n
+e R_attente_OP3 OP3 1 n
+e R_attente R_attente_OP3 1 n
+e ordre_OP2 R_attente_OP2 1 n
+e OP2 R_attente_fin_OP2 1 n
+e R_attente_OP2 OP2 1 n
+e R_attente R_attente_OP2 1 n
+e R_attente_fprise 0.9058302758 150.6021248 {départ_Robot} 0.8670752474 213.1032614 1 n
+e Rob_attente_prendG {prend piece} 1 n
+e ordre_prend Rob_attente_prendG 1 n
+e ordre_stop R_attente_stopgauche 1 n
+e {départ_Robot} R_attente_gauche 1 n
+e R_attente_gauche {va à gauche} 1 n
+e R_attente_stopgauche R_attente 1 n
+e R_attente R_attente_OP1 1 n
+e R_attente Rob_attente_prendG 1 n
+e R_attente_OP1 OP1 1 n
+e OP1 R_attente_finOP1 1 n
+e ordre_gauche R_attente_gauche 1 n
+e ordre_OP1 R_attente_OP1 1 n
+e ordre_stop R_attente_stopdroite 1 n
+e ordre_pose R_attente_pose 1 n
+e ordre_prend Rob_attente_prendD 1 n
+e ordre_droite R_attente_droite 1 n
+e R_attente_fpose 0.04779127882 206.2280291 {départ_Robot} 0.9761968374 295.2964586 1 n
+e {pose piece} R_attente_fpose 1 n
+e R_attente_pose {pose piece} 1 n
+e {prend piece} R_attente_fprise 1 n
+e Rob_attente_prendD {prend piece} 1 n
+e R_attente2 R_attente_pose 1 n
+e R_attente2 Rob_attente_prendD 1 n
+e R_attente_stopdroite R_attente2 1 n
+e R_attente_droite {va à droite} 1 n
+e {départ_Robot} R_attente_droite 1 n
+e PR_Position_T1 PR_capteur_Assembleur 1 n
+e {PR_capteur_T2-T1} PR_Position_T1 1 n
+e ordre_gauche PR_capteur_Assembleur 1 n
+e ordre_droite PR_capteur_T2 1 n
+e PR_capteur_Assembleur PR_Position_Assembleur 1 n
+e PR_capteur_Assembleur info_Pos_Ass 1 n
+e ordre_gauche 0.3394325943 63.81222453 {PR_capteur_T2-T1} 0.9795767356 62.51399784 1 n
+e {PR_capteur_T2-T1} info_Pos_t1 1 n
+e PR_Position_T2 {PR_capteur_T2-T1} 1 n
+e PR_capteur_T2 PR_Position_T2 1 n
+e PR_Position_T1 PR_capteur_T2 1 n
+e {PR_capteur_Ass-T1} PR_Position_T1 1 n
+e {PR_capteur_Ass-T1} 0.04429276638 72.80109889 info_Pos_t1 0.5807072336 61.77378085 1 n
+e ordre_droite {PR_capteur_Ass-T1} 1 n
+e PR_Position_Assembleur {PR_capteur_Ass-T1} 1 n
+e PR_capteur_T2 info_Pos_t2 1 n
+e A_finTempo {Départ_Assembleur} 1 n
+e A_finTempo {info_Ass_évacué} 1 n
+e Ass_Temporisation A_finTempo 1 n
+e {A_attente_vérif} Ass_Temporisation 1 n
+e {A_attente_vérif} info_Ass_conforme 1 n
+e {Ass_Vérif} {A_attente_vérif} 1 n
+e {A_attente_ordrevérif} {Ass_Vérif} 1 n
+e {ordre_vérif} {A_attente_ordrevérif} 1 n
+e {Départ_Assembleur} {A_attente_ordrevérif} 1 n
+e {Départ_Tapis2} {Début Mise en arrêt T2} 1 n
+e ordre_extinction_t2 0.7214600608 336.3941141 {Début Mise en arrêt T2} 0.5700031212 150.3063538 1 n
+e {Début Mise en arrêt T2} {Arrêt_T2 } 1 n
+e {Arrêt_T2 } {Signal arr_T2} 1 n
+e {Signal arr_T2} {info_t2_arrêté} 1 n
+e {Signal arr_T2} T2_Attente 1 n
+e T2_Attente {mise en marche T2} 1 n
+e {ordre_démarrage_t2} {mise en marche T2} 1 n
+e {mise en marche T2} {Départ_Tapis2} 1 n
+e {ordre_démarrage_t1} {Remise en route de T1} 1 n
+e {Remise en route de T1} {Départ_Tapis1} 1 n
+e {Arrêt_T1} {Remise en route de T1} 1 n
+e {Signal CO} {Arrêt_T1} 1 n
+e {Signal CO} info_CO 1 n
+e {Départ_Tapis1} {Signal CO} 1 n
+e {Départ_Controleur} 0.487949259 145.4166428 {C_attente_départ} 0.1360858697 91.43850392 1 n
+e {C_attente_départ} ordre_droite 2 n
+e {C_attente_départ} Controleur_Attente 1 n
+e Controleur_Attente C_attente_Pos_t1 1 n
+e info_Pos_t1 C_attente_Pos_t1 1 n
+e C_attente_Pos_t1 ordre_stop 1 n
+e C_attente_Pos_t1 Controleur_Attente2 1 n
+e Controleur_Attente2 C_attente_finReccam 1 n
+e C_attente_finReccam ordre_prend 1 n
+e C_attente_finReccam Controleur_Attente3 1 n
+e info_finReccam C_attente_finReccam 1 n
+e info_fprise C_attente_fprise 1 n
+e Controleur_Attente3 C_attente_fprise 1 n
+e C_attente_fprise Controleur_Attente4 1 n
+e C_attente_fprise {ordre_démarrage_t1} 1 n
+e Controleur_Attente4 C_attente_Assemblage 1 n
+e Assemblage C_attente_Assemblage 1 n
+e Evacuation {C_attente_Evacuation } 1 n
+e C_attente_Assemblage 0.47248838 63.95310782 ordre_gauche 0.0228132783 98.00510191 2 n
+e C_attente_Assemblage Controleur_Attente5 1 n
+e {C_attente_Evacuation } Controleur_Attente6 1 n
+e {C_attente_Evacuation } ordre_extinction_t2 1 n
+e {C_attente_Evacuation } ordre_droite 2 n
+e Controleur_Attente5 C_attente_Pos_Ass 1 n
+e info_Pos_Ass C_attente_Pos_Ass 1 n
+e Controleur_Attente6 C_attente_Pos_T2 1 n
+e info_Pos_t2 C_attente_Pos_T2 1 n
+e C_attente_Pos_Ass 0.4679896619 105.1189802 ordre_stop 0.8593592146 50.44799302 1 n
+e C_attente_Pos_T2 Controleur_Attente8 1 n
+e C_attente_Pos_Ass Controleur_Attente7 1 n
+e Controleur_Attente8 {C_attente_t2_arrêté} 1 n
+e {info_t2_arrêté} {C_attente_t2_arrêté} 1 n
+e {C_attente_t2_arrêté} ordre_pose 1 n
+e {C_attente_t2_arrêté} Controleur_Attente9 1 n
+e Controleur_Attente9 C_attente_fpose 1 n
+e info_fpose C_attente_fpose 1 n
+e C_attente_fpose 0.0935835209 79.32212806 ordre_gauche 0.6497269889 59.40538696 2 n
+e C_attente_fpose {ordre_démarrage_t2} 1 n
+e C_attente_fpose 0.3321606631 85.08818957 Controleur_Attente 0.6664761588 87.8179936 1 n
+e C_attente_Pos_T2 ordre_stop 1 n
+e Controleur_Attente7 C_attente_P1 1 n
+e Controleur_Attente7 0.8425295303 167.5231327 C_attente_P2 0.7658627587 120.5985075 1 n
+e Controleur_Attente7 0.8086797763 188.6796226 C_attente_P3 0.6250000001 100.409163 1 n
+e P1 C_attente_P1 1 n
+e P2 C_attente_P2 1 n
+e P3 C_attente_P3 1 n
+e C_attente_P1 0.190970818 77.25283166 Controleur_Attente12 0.7442150964 55.03635162 1 n
+e C_attente_P2 ordre_OP2 1 n
+e C_attente_P2 Controleur_Attente11 1 n
+e C_attente_P3 Controleur_Attente10 1 n
+e Controleur_Attente12 C_attente_finOP1 1 n
+e Controleur_Attente10 C_attente_finOP3 1 n
+e Controleur_Attente11 C_attente_finOP2 1 n
+e info_finOP1 C_attente_finOP1 1 n
+e info_finOP2 C_attente_finOP2 1 n
+e info_finOP3 C_attente_finOP3 1 n
+e C_attente_finOP1 0.3281711147 97.52948277 {Départ_Controleur} 0.9399142037 124.7878199 1 n
+e C_attente_finOP2 0.4150577031 153.3231881 {Départ_Controleur} 0.9510098526 181.5323663 1 n
+e C_attente_finOP3 0.2394053477 90.19977827 {Départ_Controleur} 0.005681690245 56.0357029 1 n
+e Controleur_Attente4 {C_attente_Evacuation } 1 n
+e C_attente_P1 ordre_OP1 1 n
+e C_attente_P3 ordre_OP3 1 n
+e fin_reccam info_finReccam 1 n
+e ordre_CO {Debut Reccam} 1 n
+e {Debut Reccam} {Reccam en cours} 1 n
+e {Reccam en cours} fin_reccam 1 n
+e fin_reccam {Cam_Type de pièce} 1 n
+e {Cam_Type de pièce} Cam_P1 1 n
+e {Cam_Type de pièce} Cam_P2 1 n
+e {Cam_Type de pièce} Cam_P3 1 n
+e Cam_P1 info_P1 1 n
+e Cam_P2 info_P2 1 n
+e Cam_P3 info_P3 1 n
+e Cam_P1 0.5490455473 395.6374603 {Départ_Caméra} 0.5345833237 236.562888 1 n
+e Cam_P2 0.001433789527 111.0045044 {Départ_Caméra} 0.0006216958343 256.0019531 1 n
+e {Départ_Caméra} {Debut Reccam} 1 n
+e Cam_P3 0.4764887621 169.8499338 {Départ_Caméra} 0.5885474728 236.69812 1 n
+e {va à gauche} tempo_gauche 1 n
+e tempo_gauche Tempo_gauche 2 n
+e Tempo_gauche R_attente_stopgauche 1 n
+e {va à droite} tempo_droite 1 n
+e tempo_droite Tempo_droite 2 n
+e Tempo_droite R_attente_stopdroite 1 n
+e Tempo_gauche {PR_capteur_T2-T1} 1 n
+e Tempo_gauche PR_capteur_Assembleur 1 n
+e Tempo_droite PR_capteur_T2 1 n
+e Tempo_droite {PR_capteur_Ass-T1} 1 n
+e info_finOP1 GS_attente_assemblage 1 n
+e info_finOP2 GS_attente_assemblage 1 n
+e info_finOP3 GS_attente_assemblage 1 n
+e info_Ass_conforme {GS_attente_assemblage_évacué} 1 n
+h {RESEAU DE PETRI FINAL_complet}
+
+

@@ -1,0 +1,31 @@
+p 310.0 30.0 {Départ_Caméra} 1 w
+t 310.0 165.0 {Debut Reccam} s 0 w n co c
+p 390.0 340.0 {Cam_Type de pièce} 0 n
+t 390.0 405.0 Cam_P1 w 0 w n P1 c
+p 390.0 470.0 info_P1 0 w out s
+t 465.0 340.0 Cam_P2 e 0 w n P2 c
+p 465.0 410.0 info_P2 0 e out s
+t 285.0 340.0 Cam_P3 w 0 w n P3 c
+p 390.0 165.0 {Reccam en cours} 0 e Reccam n
+t 390.0 235.0 fin_reccam ne 0 w n fin_reccam c
+p 245.0 165.0 ordre_CO 0 n in w
+p 280.0 260.0 info_finReccam 0 w out s
+p 220.0 395.0 info_P3 0 w out s
+e fin_reccam info_finReccam 1 n
+e ordre_CO {Debut Reccam} 1 n
+e {Debut Reccam} {Reccam en cours} 1 n
+e {Reccam en cours} fin_reccam 1 n
+e fin_reccam {Cam_Type de pièce} 1 n
+e {Cam_Type de pièce} Cam_P1 1 n
+e {Cam_Type de pièce} Cam_P2 1 n
+e {Cam_Type de pièce} Cam_P3 1 n
+e Cam_P1 info_P1 1 n
+e Cam_P2 info_P2 1 n
+e Cam_P3 info_P3 1 n
+e Cam_P1 0.5490455473 395.6374603 {Départ_Caméra} 0.5345833236 236.562888 1 n
+e Cam_P2 0.001433789527 111.0045044 {Départ_Caméra} 0.0006216958343 256.0019531 1 n
+e {Départ_Caméra} {Debut Reccam} 1 n
+e Cam_P3 0.4764887621 169.8499338 {Départ_Caméra} 0.5885474726 236.69812 1 n
+h {caméra}
+
+

@@ -1,0 +1,15 @@
+p 405.0 155.0 {Arrêt_T2 } 0 e
+t 240.0 155.0 {Signal arr_T2} s 0 w n {arrêt_t2} n
+p 240.0 50.0 {Départ_Tapis2} 1 n AV_T2 s
+t 405.0 50.0 {Début Mise en arrêt T2} e 0 w n {} ne
+t 105.0 50.0 {mise en marche T2} n 0 w n {} ne
+p 105.0 155.0 T2_Attente 0 w
+e {Départ_Tapis2} {Début Mise en arrêt T2} 1 n
+e {Début Mise en arrêt T2} {Arrêt_T2 } 1 n
+e {Arrêt_T2 } {Signal arr_T2} 1 n
+e {Signal arr_T2} T2_Attente 1 n
+e T2_Attente {mise en marche T2} 1 n
+e {mise en marche T2} {Départ_Tapis2} 1 n
+h {tapis2_simplifié}
+
+
